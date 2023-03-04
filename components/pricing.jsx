@@ -45,7 +45,7 @@ const Pricing = () => {
             transform: isInView ? "none" : "translateY(200px)",
             opacity: isInView ? 1 : 0,
             transition:
-              "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
+              "transform: none;opacity: 0;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
           }}
           class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px] col-span-full md:col-span-4 bg-white shadow-md rounded-lg"
         >
@@ -110,7 +110,7 @@ const Pricing = () => {
             transform: isInView ? "none" : "translateY(200px)",
             opacity: isInView ? 1 : 0,
             transition:
-              "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.7s;",
+              "transform: none;opacity: 0;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.7s;",
           }}
           class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px]sm:w-[260px] col-span-full md:col-span-4 bg-green2 shadow-md rounded-lg"
         >
@@ -185,7 +185,7 @@ const Pricing = () => {
             transform: isInView ? "none" : "translateY(200px)",
             opacity: isInView ? 1 : 0,
             transition:
-              "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.9s;",
+              "transform: none;opacity: 0;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.9s;",
           }}
           class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px] col-span-full md:col-span-4 bg-white shadow-md rounded-lg"
         >

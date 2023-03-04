@@ -13,7 +13,7 @@ const Tweets = () => {
           transform: isInView ? "none" : "translateY(700px)",
           opacity: isInView ? 1 : 0,
           transition:
-            "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
+            "transform: none;opacity: 0;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
         }}
         className="px-[2rem] text-5xl font-semibold mb-[4rem] text-black"
       >
@@ -25,7 +25,7 @@ const Tweets = () => {
           transform: isInView ? "none" : "translateY(700px)",
           opacity: isInView ? 1 : 0,
           transition:
-            "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.7s;",
+            "transform: none;opacity: 0;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.7s;",
         }}
         className="flex flex-row flex-wrap justify-between gap-4 mx-2"
       >
@@ -60,7 +60,7 @@ const Tweets = () => {
           transform: isInView ? "none" : "translateY(200px)",
           opacity: isInView ? 1 : 0,
           transition:
-            "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.9s;",
+            "transform: none;opacity: 0;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.9s;",
         }}
         className="flex flex-col justify-around h-auto"
       >

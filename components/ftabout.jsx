@@ -8,10 +8,10 @@ const Ftabout = () => {
     <span
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateX(-700px)",
+        transform: isInView ? "none" : "translatey(400px)",
         opacity: isInView ? 1 : 0,
         transition:
-          "transform: none;opacity: 1;transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
+          "transform: none;opacity: 0;transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s;",
       }}
       className="px-[2rem] text-5xl sm:text-8xl font-semibold text-black"
     >
