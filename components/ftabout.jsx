@@ -8,7 +8,7 @@ const Ftabout = () => {
     <span
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translatey(400px)",
+        transform: isInView ? "none" : "translateX(-200px)",
         opacity: isInView ? 1 : 0,
         transition:
           "transform: none;opacity: 0;transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s;",
