@@ -1,10 +1,74 @@
+@import "./components.css";
+
+.scroll {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-image: url("../assets/website.png");
+}
+
+.opentabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: #a8ff35;
+}
+
+.ftabout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: white;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: black;
+}
+
+.tweets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: #f5f5f5;
+}
+.joinus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: #a8ff35;
 }
 
 .description {
@@ -97,7 +161,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +189,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -160,6 +224,11 @@
 
   .card:hover span {
     transform: translateX(4px);
+  }
+}
+@media (min-width: 420px) {
+  .opentabs {
+    height: 100vh;
   }
 }
 
