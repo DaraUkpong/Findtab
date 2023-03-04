@@ -8,7 +8,7 @@ const Opentabs = () => {
     <div
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateX(-300px)",
+        transform: isInView ? "none" : "translateX(-800px)",
         opacity: isInView ? 1 : 0,
         transition:
           "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
