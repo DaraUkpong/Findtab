@@ -1,4 +1,4 @@
-import { Component, useRef } from "react";
+import React, { Component, useRef } from "react";
 import { useInView } from "framer-motion";
 import Image from "next/image";
 const Opentabs = () => {

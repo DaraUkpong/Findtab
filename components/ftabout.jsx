@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "next";
+import React, { Component, useRef } from "react";
 import { useInView } from "framer-motion";
 
 const Ftabout = () => {
