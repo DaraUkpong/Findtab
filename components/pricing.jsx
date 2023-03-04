@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
+import { useInView } from "framer-motion";
 import Image from "next/image";
 
 const Pricing = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { once: false });
   return (
-    <div className="flex flex-col place-items-center mt-10 mb-10">
+    <div ref={ref} className="flex flex-col place-items-center mt-10 mb-10">
       <span className="px-[2rem] text-3xl sm:text-5xl font-semibold mb-[1rem] text-white">
         Get your best deal
       </span>
@@ -36,7 +39,16 @@ const Pricing = () => {
       {/* Toggle Ends */}
       <div className="flex flex-col sm:flex-row gap-x-8 gap-y-8">
         {/* <!-- Tab 1 --> */}
-        <div class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px] col-span-full md:col-span-4 bg-white shadow-md rounded-lg">
+        <div
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateY(200px)",
+            opacity: isInView ? 1 : 0,
+            transition:
+              "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
+          }}
+          class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px] col-span-full md:col-span-4 bg-white shadow-md rounded-lg"
+        >
           <div>
             <div class="px-5 pt-5 pb-3 border-b border-gray-200">
               <header class="flex items-center ">
@@ -54,7 +66,7 @@ const Pricing = () => {
                 <span class="text-gray-500 font-medium text-sm">/month</span>
               </div>
               {/* <!-- List --> */}
-              <ul>
+              <ul className="text-black">
                 <li class="flex items-center py-1">
                   <svg
                     class="w-3 h-3 flex-shrink-0 fill-current text-black mr-2"
@@ -86,23 +98,34 @@ const Pricing = () => {
             </div>
           </div>
 
-          <button class="text-sm py-2 w-3/4 mb-4 bg-primary rounded-3xl">
+          <button class="text-sm py-2 w-3/4 mb-4 bg-primary rounded-3xl text-black">
             Start Free Trial 🔥
           </button>
         </div>
 
         {/* Tab 2 */}
-        <div class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px]sm:w-[260px] col-span-full md:col-span-4 bg-green2 shadow-md rounded-lg">
+        <div
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateY(200px)",
+            opacity: isInView ? 1 : 0,
+            transition:
+              "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.7s;",
+          }}
+          class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px]sm:w-[260px] col-span-full md:col-span-4 bg-green2 shadow-md rounded-lg"
+        >
           <div>
             <div class="px-5 pt-5 pb-3 border-b border-gray-200">
               <header class="flex items-center ">
-                <h3 class="text-xl text-gray-800 font-semibold">Regular</h3>
+                <h3 class="text-xl text-black font-semibold">Regular</h3>
               </header>
-              <div class="text-sm mb-2">Recommended for personal use</div>
+              <div class="text-sm mb-2 text-black">
+                Recommended for personal use
+              </div>
               {/* <!-- Price --> */}{" "}
             </div>
             <div class="px-5 pt-4 pb-5">
-              <div class="text-gray-800 font-bold mb-4">
+              <div class="text-black font-bold mb-4">
                 <span class="text-2xl">$</span>
                 <span class="text-5xl" x-text="annual ? '20' : '19'">
                   20
@@ -110,7 +133,7 @@ const Pricing = () => {
                 <span class="text-black font-medium text-sm">/month</span>
               </div>
               {/* <!-- List --> */}
-              <ul>
+              <ul className="text-black">
                 <li class="flex items-center py-1">
                   <svg
                     class="w-3 h-3 flex-shrink-0 fill-current text-black mr-2"
@@ -156,25 +179,36 @@ const Pricing = () => {
           </button>
         </div>
         {/* Tab 3 */}
-        <div class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px] col-span-full md:col-span-4 bg-white shadow-md rounded-lg">
+        <div
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateY(200px)",
+            opacity: isInView ? 1 : 0,
+            transition:
+              "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.9s;",
+          }}
+          class=" flex flex-col justify-between items-center relative  h-[500px] w-[330px] sm:w-[260px] col-span-full md:col-span-4 bg-white shadow-md rounded-lg"
+        >
           <div>
             <div class="px-5 pt-5 pb-3 border-b border-gray-200">
               <header class="flex items-center ">
-                <h3 class="text-xl text-gray-800 font-semibold">Premium</h3>
+                <h3 class="text-xl text-black font-semibold">Premium</h3>
               </header>
-              <div class="text-sm mb-2">For Startups & Companies</div>
+              <div class="text-sm mb-2 text-black">
+                For Startups & Companies
+              </div>
               {/* <!-- Price --> */}{" "}
             </div>
             <div class="px-5 pt-4 pb-5">
               <div class="text-gray-800 font-bold mb-4">
                 <span class="text-2xl">$</span>
-                <span class="text-5xl" x-text="annual ? '48' : '19'">
+                <span class="text-5xl text-black" x-text="annual ? '48' : '19'">
                   48
                 </span>
                 <span class="text-gray-500 font-medium text-sm">/month</span>
               </div>
               {/* <!-- List --> */}
-              <ul>
+              <ul className="text-black">
                 <li class="flex items-center py-1">
                   <svg
                     class="w-3 h-3 flex-shrink-0 fill-current text-black mr-2"
@@ -233,7 +267,7 @@ const Pricing = () => {
             </div>
           </div>
 
-          <button class="text-sm py-2 w-3/4 mb-4 bg-primary rounded-3xl">
+          <button class="text-sm py-2 w-3/4 mb-4 bg-primary rounded-3xl text-black">
             Start Free Trial 🔥
           </button>
         </div>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
@@ -46,7 +45,7 @@ export default function Home() {
           <Pricing />
         </div>
         <div className={styles.joinus}>
-          <span className="px-[2rem] text-3xl sm:text-6xl font-semibold text-center">
+          <span className="px-[2rem] text-3xl sm:text-6xl font-semibold text-center text-black">
             Join us via email for,<br></br>{" "}
             <span className="text-green2">more trending topics</span>
           </span>
@@ -54,7 +53,7 @@ export default function Home() {
             Join Us 📞
           </button>
         </div>
-        <div className="w-full h-[80px] flex flex-col sm:flex-row justify-between items-center">
+        <div className="w-full h-[80px] flex flex-col sm:flex-row justify-between items-center text-black">
           <div className="sm:ml-12 my-3">
             <img src="/logofooter.svg" alt="" />
           </div>

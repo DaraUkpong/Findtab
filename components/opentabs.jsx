@@ -8,9 +8,10 @@ const Opentabs = () => {
     <div
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateX(-200px)",
+        transform: isInView ? "none" : "translateX(-300px)",
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
+        transition:
+          "transform: none;opacity: 1;transition: all 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
       }}
       className="flex flex-col justify-center items-center h-[50vh] sm:h-screen"
     >

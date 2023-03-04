@@ -8,11 +8,12 @@ const Ftabout = () => {
     <span
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateX(-200px)",
+        transform: isInView ? "none" : "translateX(-400px)",
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        transition:
+          "transform: none;opacity: 1;transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;",
       }}
-      className="px-[2rem] text-5xl sm:text-8xl font-semibold"
+      className="px-[2rem] text-5xl sm:text-8xl font-semibold text-black"
     >
       Findtrend helps you to increase your productivity and reduce your
       computer's memory load,{" "}

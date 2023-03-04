@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-row justify-between items-center relative w-[100%] pt-[2rem] px-[3rem]">
+    <div className="flex flex-col sm:flex-row justify-between items-center relative w-[100%] pt-[2rem] px-[3rem]">
       <div className="w-full flex flex-row justify-between">
         <Image
           src="/logo.png"
@@ -39,7 +39,14 @@ const Navbar = () => {
       </div>
 
       {/* mobilenav */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
         className="w-full absolute flex flex-col items-center h-full"
         id="navbar-solid-bg"
       >
@@ -123,7 +130,7 @@ const Navbar = () => {
             </button>
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };
