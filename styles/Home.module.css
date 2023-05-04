@@ -1,19 +1,10 @@
-@import "./components.css";
-
-.scroll {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+
   background-image: url("../assets/website.png");
 }
 

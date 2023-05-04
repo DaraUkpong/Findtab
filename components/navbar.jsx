@@ -7,7 +7,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center relative w-[100%] pt-[2rem] px-[3rem]">
+    <div
+      className="flex flex-col sm:flex-row justify-between items-center relative w-full
+     pt-[2rem] sm:px-[3rem]"
+    >
       <div className="w-full flex flex-row justify-between">
         <Image
           src="/logo.png"
@@ -18,7 +21,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className=" hidden sm:flex flex-row place-items-center justify-between w-3/4"
+        className="hidden sm:flex flex-row place-items-center justify-between w-3/4"
         id="navbar-solid-bg"
       >
         <div className="flex flex-row justify-between text-gray2 font-semibold w-[488px]">
@@ -47,7 +50,7 @@ const Navbar = () => {
           delay: 0.5,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="w-full absolute flex flex-col items-center h-full"
+        className="w-full relative flex sm:hidden flex-col items-center h-full"
         id="navbar-solid-bg"
       >
         <div className="w-full flex flex-row justify-between mx-3  bg-black">
@@ -104,8 +107,58 @@ const Navbar = () => {
         {isOpen == true && (
           <div
             id="mobile-nav"
-            className="flex flex-col justify-between items-center text-gray2 font-semibold w-full bg-black h-screen"
+            className="flex flex-col justify-between items-center text-gray2 font-semibold w-full bg-black h-auto absolute"
           >
+            <div className="w-full flex flex-row justify-between mx-3  bg-black">
+              <Image
+                src="/Logomobile.svg"
+                width={40}
+                height={40}
+                className="block sm:hidden ml-[2rem]"
+              />
+              <button
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+                class="inline-flex items-center p-2 mr-[2rem] text-sm text-primary rounded-lg sm:hidden"
+                aria-controls="navbar-solid-bg"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
             <a href="" className="my-4">
               About
             </a>

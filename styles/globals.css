@@ -72,3 +72,24 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: black;
+}
+
+::-webkit-scrollbar:hover {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a8ff35;
+  border-radius: 6px;
+}
